@@ -32,11 +32,7 @@ This is a Flask-based web application that allows users to upload an image and d
 │   └── metadata.html          # Metadata viewing page
 ├── static/
 │   └── styles.css             # UI styling
-├── test_predict.py            # CLI script for standalone prediction
 ├── requirements.txt           # Python dependencies
-├── assets/
-│   ├── real_detect.png        # Screenshot showing real prediction
-│   └── fake_detect.png        # Screenshot showing fake prediction
 └── README.md
 ```
 
