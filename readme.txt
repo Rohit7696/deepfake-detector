@@ -45,10 +45,10 @@ This is a Flask-based web application that allows users to upload an image and d
 ## 🖼️ Demo Screenshots
 
 ### ✅ Real Image Detection Result
-![Real Image](assets/real_detect.png)
+![Real Image](static/real_detect.png)
 
 ### ❌ Fake Image Detection Result
-![Fake Image](assets/fake_detect.png)
+![Fake Image](static/fake_detect.png)
 
 ---
 
