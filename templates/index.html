@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="drawer">
+        <a href="/">Image Detection</a>
+        <a href="/metadata">View Metadata</a>
+    </div>
+    <div class="content">
+        <div class="upload-box">
+            <h2>Upload an Image to Check Authenticity</h2>
+            <form method="POST" enctype="multipart/form-data">
+                <input type="file" name="image" required class="file-input"><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

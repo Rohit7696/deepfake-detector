@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    function toggleMetadata() {
+        const metaSection = document.getElementById("meta-section");
+        metaSection.style.display = (metaSection.style.display === "none") ? "block" : "none";
+    }
+</script>
+
+</head>
+<body>
+    <div class="drawer">
+        <a href="/">Image Detection</a>
+        <a href="/metadata">View Metadata</a>
+    </div>
+    <div class="content">
+        <div class="result-container">
+            <div class="result-left">
+                <h1>Prediction Result</h1>
+                <img src="{{ url_for('static', filename=filename) }}" alt="Uploaded Image">
+                <h2>Prediction: {{ label }}</h2>
+                <div class="score">Confidence Score: {{ confidence }}</div>
+                <a class="meta-btn" onclick="toggleMetadata()">Toggle Metadata</a>
+                <div id="meta-section" style="display:none; margin-top:20px; text-align:left;">
+    <h3>All Metadata</h3>
+    <table class="metadata-table">
+        <thead><tr><th>Key</th><th>Value</th></tr></thead>
+        <tbody>
+            {% for key, value in metadata.items() %}
+            <tr><td>{{ key }}</td><td>{{ value }}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+                </div>
+                <a href="/" class="meta-btn" style="background-color:#007bff;">← Try Another Image</a>
+            </div>
+            <div class="result-right">
+                <canvas id="confidenceChart" width="400" height="300"></canvas>
+                <script>
+                    const ctx = document.getElementById('confidenceChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: ['Threshold', 'Noise 1', 'Actual Prediction', 'Noise 2', 'Final'],
+                            datasets: [{
+                                label: 'Confidence Level',
+                                data: [50, {{ raw_confidence|round(2) - 10 }}, {{ raw_confidence|round(2) }}, {{ raw_confidence|round(2) - 5 }}, {{ raw_confidence|round(2) }}],
+                                borderColor: '#00ff88',
+                                backgroundColor: '#00ff8820',
+                                tension: 0.3,
+                                fill: true
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    min: 0,
+                                    max: 100,
+                                    title: {
+                                        display: true,
+                                        text: 'Confidence (%)'
+                                    }
+                                }
+                            }
+                        }
+                    });
+                </script>
+<script>
+    function toggleMetadata() {
+        const metaSection = document.getElementById("meta-section");
+        metaSection.style.display = (metaSection.style.display === "none") ? "block" : "none";
+    }
+</script>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
