@@ -1,20 +1,20 @@
-# Deepfake Image Detection Web App
+Deepfake Image Detection Web App
 
 This is a Flask-based web application that allows users to upload an image and detect whether it is real or fake using a deep learning model. It also includes metadata analysis and a confidence graph visualization.
 
 ---
 
-## 🖼️ Demo Screenshots
+🖼️ Demo Screenshots
 
-### ✅ Real Image Detection Result
+✅ Real Image Detection Result
 <img src="https://raw.githubusercontent.com/Rohit7696/deepfake-detector/master/static/real_detect.png" width="800"/>
 
-### ❌ Fake Image Detection Result
+❌ Fake Image Detection Result
 <img src="https://raw.githubusercontent.com/Rohit7696/deepfake-detector/master/static/fake_detect.png" width="800"/>
 
 
 
-## 🚀 Features
+🚀 Features
 - Upload image through a clean UI
 - Predict if an image is real or fake using a trained model (`fake_image_detector.h5`)
 - View prediction confidence on a line graph
@@ -23,7 +23,7 @@ This is a Flask-based web application that allows users to upload an image and d
 
 ---
 
-## 🛠 Tech Stack
+🛠 Tech Stack
 - **Backend:** Python, Flask
 - **Frontend:** HTML, CSS, JavaScript (Chart.js)
 - **Model:** TensorFlow / Keras
@@ -32,7 +32,7 @@ This is a Flask-based web application that allows users to upload an image and d
 
 ---
 
-## 📂 Project Structure
+📂 Project Structure
 ```
 ├── server.py                  # Main Flask app
 ├── fake_image_detector.h5     # Trained deepfake detection model
