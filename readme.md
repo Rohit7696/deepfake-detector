@@ -119,3 +119,5 @@ This project is for educational and research purposes only.
 ## 👨‍💻 Author
 **Rohit Pawar**  
 For any questions or feedback, feel free to reach out.
+
+mail: rohitpawar7696@gmail.com
