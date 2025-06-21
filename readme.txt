@@ -13,6 +13,7 @@ This is a Flask-based web application that allows users to upload an image and d
 <img src="https://raw.githubusercontent.com/Rohit7696/deepfake-detector/master/static/fake_detect.png" width="800"/>
 
 
+
 ## 🚀 Features
 - Upload image through a clean UI
 - Predict if an image is real or fake using a trained model (`fake_image_detector.h5`)
