@@ -7,10 +7,10 @@ This is a Flask-based web application that allows users to upload an image and d
 ## 🖼️ Demo Screenshots
 
 ### ✅ Real Image Detection Result
-<img src="https://github.com/haoyGONG/LPDGAN/blob/main/figures/results.jpg" width="800"/>
+<img src="https://github.com/Rohit7696/deepfake-detector/blob/master/static/real_detect.png" width="800"/>
 
 ### ❌ Fake Image Detection Result
-<img src="https://github.com/haoyGONG/LPDGAN/blob/main/figures/results.jpg" width="800"/>
+<img src="https://github.com/Rohit7696/deepfake-detector/blob/master/static/fake_detect.png" width="800"/>
 
 ## 🚀 Features
 - Upload image through a clean UI
