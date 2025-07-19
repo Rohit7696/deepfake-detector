@@ -1,0 +1,9 @@
+Flask==2.3.2
+tensorflow==2.13.0
+numpy==1.24.3
+Pillow==9.5.0
+opencv-python==4.7.0.72
+Werkzeug==2.3.6
+chart.js==2.9.4
+
+# Make sure exiftool is installed on your system (not a Python package
